@@ -114,7 +114,8 @@ if(isset($fail)) // condition si echec de l'enregistrement
 ?>
 
 <div class="container-fluid">
-<div class="row justify-content-center">
+    <div class="row pt-3">
+<div class="row col-12 col-md-9">
     <form action="product_modif.php?pro_id=<?= $pro_id ?>" method="POST" enctype="multipart/form-data" class="col-12 col-lg-7">
         <div class="form-group">
             <label for="pro_id">ID</label>

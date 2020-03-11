@@ -25,7 +25,8 @@ if (isset($_GET['delete'])) // si la valeur du bouton supprimer est envoyé
 ?>
 <?php include_once "topOfPage.php" ?>
 <div class="container-fluid">
-<div class="row justify-content-center">
+    <div class="row pt-3">
+<div class="row col-12 col-md-9">
 <form action="product_details.php" method="POST" class="col-12 col-lg-7">
     <?php
 

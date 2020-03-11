@@ -1,3 +1,43 @@
+    <div class="col-md-3 pr-5">
+        <div id="newProductCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img class=" w-100" src="assets\img\images\in-the-garden-1328551-640x960.jpg" alt="image plantes">
+                    <div class="carousel-caption">
+                        <h5>Plantes</h5>
+                        <p>produit</p>
+                        <a href="product_liste.php" type="button" class="btn btn-success">Découvrir</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class=" w-100" src="assets\img\images\in-the-garden-1328551-640x960.jpg" alt="image matériel">
+                    <div class="carousel-caption d-block">
+                        <h5>Matériel de jardinage</h5>
+                        <p>produit</p>
+                        <a href="product_liste.php"><button type="button" class="btn btn-success">Découvrir</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets\img\images\in-the-garden-1328551-640x960.jpg" alt="image terreaux">
+                    <div class="carousel-caption d-block">
+                        <h5>Terreaux, Graines, Bulbes</h5>
+                        <p>produit</p>
+                        <a href="product_liste.php"><button type="button" class="btn btn-success">Découvrir</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets\img\images\in-the-garden-1328551-640x960.jpg" alt="image jardinière">
+                    <div class="carousel-caption d-block">
+                        <h5>Jardinières, pots de fleurs, bacs</h5>
+                        <p>produit</p>
+                        <a href="product_liste.php"><button type="button" class="btn btn-success">Découvrir</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 <script src="assets/js/javascript.js"></script> 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

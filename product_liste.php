@@ -22,8 +22,9 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
 ?>
 
     <?php include_once "topOfPage.php" ?> 
-    <div class="container">   
-    <div class="row justify-content-center">
+    <div class="container-fluid">
+    <div class="row pt-3">
+<div class="row col-12 col-md-9">
           <div class="table mx-auto pt-5 row">
           <div class="d-flex">
             <table class="table table-bordered table-hover border ">

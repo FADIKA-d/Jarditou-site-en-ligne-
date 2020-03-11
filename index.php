@@ -26,7 +26,7 @@
 
     </head>
     <body>
-        <div class="container-fluid">
+    <div class="container-fluid">
             <div class="card  bg-dark text-white" >
                 <img classe="card-img" id="card-img" src="assets/img/images/jardin.jpg" alt="card image jardin">
                 <div class="card-img-overlay">
@@ -54,6 +54,8 @@
             </div>
             <div class="pub col-12 d-none d-md-flex px-0 flex-wrap">
             <img src="assets\img\images\promotion.jpg" alt="image promotion" class="w-100 h-auto rounded pt-2">
+            <div class="row pt-3">
+            <div class="row col-12 col-md-9">
         </div>
         </div>
         <?php include_once "endOfPage.php" ?>
