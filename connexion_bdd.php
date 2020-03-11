@@ -2,15 +2,21 @@
 
 function connexionBase()
 {
+    // $host="localhost"; 
+    // $login= "dfadika";  // loggin d'accès au serveur de BDD 
+    // $password="df19225";    // pour s'identifier auprès du serveur
+    // $base = "dfadika";
+
     $host="localhost"; 
-    $login= "dfadika";  // loggin d'accès au serveur de BDD 
-    $password="df19225";    // pour s'identifier auprès du serveur
-    $base = "dfadika";
+    $login= "root";  // loggin d'accès au serveur de BDD 
+    $password="";    // pour s'identifier auprès du serveur
+    $base = "jarditou";
 
    try 
    {
       
-       $db= new PDO('mysql:host='.$host.';charset=utf8;dbname='.$base, $login, $password);
+    //    $db= new PDO('mysql:host='.$host.';charset=utf8;dbname='.$base, $login, $password);
+       $db= new PDO('mysql:host='.$host.':3308;charset=utf8;dbname='.$base, $login, $password);
        return $db;
     } 
     

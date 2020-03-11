@@ -19,18 +19,18 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
             redirection(); // Si la fonction diversDeleteProducts a été executé la fonction redirection s'éxecute aussi
         } ; 
 }
-
 ?>
 
     <?php include_once "topOfPage.php" ?> 
     <div class="container">   
     <div class="row justify-content-center">
-          <div class="table mx-auto pt-5">
+          <div class="table mx-auto pt-5 row">
+          <div class="d-flex">
             <table class="table table-bordered table-hover border ">
             <form method="POST" action="product_liste.php" id="formD" class="col-12 col-lg-7" >
                 <thead>
                     <tr>
-                        <th>Photo</th>
+                        <th >Photo</th>
                         <th>ID</th>
                         <th>Référence</th>
                         <th>Libellé</th>
@@ -40,7 +40,6 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
                         <th>Ajout</th>
                         <th>Modif</th>
                         <th>Bloqué</th>
-                        <th colspan="2"></th>
                         <th><i class="fas fa-trash-alt"></i></th>
                     </tr>
                 </thead>
@@ -61,8 +60,8 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
                     ?>
                     <tr> 
                         <td><a href="product_liste.php?card_id=<?=$product->pro_id?>" data-toggle="collapse" aria-expanded="false" aria-controls="product_card"></a>
-                        <button class="btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#product_card" aria-expanded="false" aria-controls="product_card">
-                            <img src="<?= $src ?>" alt="photo" class="dropright w-25 h-auto" ></img>
+                        <button class="btn-custom " type="button" data-toggle="collapse" data-target="#product_card" aria-expanded="false" aria-controls="product_card">
+                            <img src="<?= $src ?>" alt="photo" class="dropright post-img"></img>
                         </button>
                         </td>
                         <!-- <td><a href="#product_card" data-toggle="dropright" aria-expanded="false" aria-controls="product_card" class="form-control" ><img src="<?= $src ?>" alt="photo" class="dropright w-25 h-auto" ></img></a></td> -->
@@ -73,10 +72,8 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
                         <td><?php echo $product->pro_stock; ?></td>
                         <td><?php echo $product->pro_couleur; ?></td>
                         <td><?php echo $product->pro_d_ajout; ?></td>
-                        <td><?php echo $product->pro_d_modif; ?></td>
+                        <td><a href="product_modif.php?pro_id=<?= $product->pro_id ?>"><i class="fas fa-edit fa-2x"></i></a><br><?php echo $product->pro_d_modif; ?></td>
                         <td><?php echo $product->pro_bloque; ?></td>
-                        <td><a href="product_details.php?pro_id=<?= $product->pro_id ?>"><i class="fas fa-info-circle fa-2x"></i></a></td>
-                        <td><a href="product_modif.php?pro_id=<?= $product->pro_id ?>"><i class="fas fa-edit fa-2x"></i></a></td>
                         <td><input type="checkbox" name="delete[<?=$product->pro_id?>]" value="<?=$product->pro_id?>"></td>
                      </tr>
                     <?php
@@ -85,14 +82,14 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
                 </tbody>
                 <tfoot>
                 <tr>
-                <td colspan="12"></td>
+                <td colspan="10"></td>
                 <td><button class="btn btn-secondary" type="submit" name="count_product_delete" id="delete" value="valider">Valider </button> </td>
                 <!-- <td><button type="button" form="formD" name="count_product_delete" value="Submit" class="btn btn-secondary" data-toggle="modal" data-target="#delete_modal">Valider</button></td> -->
             </tr>
                 </tfoot>
                 </form>
             </table>
-            
+            <a href="product_add.php"><button class="btn sticky-top"><i class="far fa-plus-square fa-2x plus"></i></button></a></div>
             <form action="product_modif.php" method="POST" >
                 <button name="modif" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modif_modal">Modifier</button>
                 <button class="btn btn-secondary"><a href="product_add.php">Ajouter</a></button>
@@ -150,7 +147,8 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
         <div class="collapse fixed-top bg-secondary justify-content-center d-bloc w-50" id="product_card" >
             <div class="card w-50" >
                 <?php
-                 $card_id=$_GET['card_id'] ?? '';
+                 if(isset ($_GET['card_id'])){$card_id=$_GET['card_id'];}
+                 var_dump($card_id);
                  foreach ($products as $product)
                  {
                     $src = "assets/img/images/".$card_id. '.' . $product->pro_photo;

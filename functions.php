@@ -122,3 +122,5 @@
         $data= strip_tags($data);
         return $data;
     }
+
+    

@@ -1,3 +1,82 @@
 .rouge {
     color: red;
 }
+
+.btn-custom {
+    background-color:rgb(235, 253, 238);
+    transition:all .5s;
+    border-radius:12.5px;
+}
+
+.btn-custom:hover {
+    box-shadow:inset -160px -160px 40px #fff;
+}
+.post-img {
+    width: 10em;
+    height: 10em;
+    transition:all .5s;
+}
+.post-img:hover {
+    width: 15em;
+    height: 15em;
+    transition:all .5s;
+}
+
+.plus {
+    width: 2em;
+    height: 2em;
+    transition:all .5s;
+}
+.plus:hover {
+    width: 3em;
+    height: 3em;
+    transition:all .5s;
+}
+
+@media all and (min-width: 768px) {
+    
+    #phrase{
+        font-size: 2rem;
+        font-weight: 1000;
+        font-family: cursive;
+        color: seagreen;
+        text-align: center;
+    }
+    #phrase_index{
+        font-size: 2rem;
+        font-weight: 1000;
+        font-family: cursive;
+        color: light;
+        text-align: center;
+    }
+    #card-img
+    {
+    height: 60rem;
+    }
+    .index
+    {
+        width: 33rem;
+        font-size: 5rem;
+    }
+
+}
+@media all and (max-width: 768px) {
+    
+    #phrase{
+        font-weight: 200;
+        font-family: cursive;
+        color: seagreen;
+        text-align: center;
+    }
+    #phrase_index{
+        font-weight: 200;
+        font-family: cursive;
+        color: light;
+        text-align: center;
+    }
+    #card-img
+    {
+    height: 40rem;
+    }
+
+}

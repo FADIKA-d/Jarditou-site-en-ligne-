@@ -16,22 +16,34 @@
 </head>
 
 <body>
-<div class="container-fluid">
-        <div class="d-flex justify-content-between">
-            <img classe="" src="assets/img/images/jarditou_logo.jpg" alt="card image jardin" style="width: 10%;">
-            <p>Tout pour le jardin</p>
-        </div>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler">
-            <span class="navbar-toggler-icon"> </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="formulaire.php">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="product_liste.php">Produits</a></li>
-            </ul>
+<div class="container-fluid d-flex justify-content-between row">
+    <div class="d-flex col-9 col-md-12 d-flex row">
+        <div class="col-12 col-md-6 ">
+            <picture >
+                <source media="(min-width: 768px)" srcset="assets\img\images\jarditou_logo.jpg">
+                <source media="(min-width: 0px)" srcset="assets\img\images\jarditou_logo_mobil.png" >
+                <img src="assets\img\images\jarditou_logo.jpg" alt="Logo jarditou" class="w-50 w-md-25">
+            <picture>
+        </div>   
+        <div class="col-12 col-md-6 text-justify pt-4" id="phrase">Tout pour le jardin</div>
+    </div>
+    <div class="col-3 col-md-12 d-flex justify-content-center d-md-block">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ">
+                    <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="formulaire.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product_liste.php">Produits</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="pub col-12 d-none d-md-flex flex-wrap">
+            <img src="assets\img\images\promotion.jpg" alt="" class="w-100 h-auto rounded pt-2">
         </div>
 </div>
         
-    </nav>
+   
