@@ -2,27 +2,29 @@
     color: red;
 }
 
-.btn-custom {
-    background-color:rgb(235, 253, 238);
-    transition:all .5s;
-    border-radius:12.5px;
-}
 
-.btn-custom:hover {
+/* .btn-custom:hover {
     box-shadow:inset -160px -160px 40px #fff;
-}
+} */
 .post-img {
-    width: 10em;
-    height: 10em;
     transition:all .5s;
+    max-width: 10em;
+    max-height: 10em;
+    position: relative;
 }
 .post-img:hover {
-    width: 15em;
-    height: 15em;
+    max-width: 15em;
+    max-height: 15em;
+    position: relative;
+    transition:all .5s;
+    z-index: 100;
+}
+.photo {
+
     transition:all .5s;
 }
 
-.plus {
+/* .plus {
     width: 2em;
     height: 2em;
     transition:all .5s;
@@ -31,7 +33,7 @@
     width: 3em;
     height: 3em;
     transition:all .5s;
-}
+} */
 
 @media all and (min-width: 768px) {
     
@@ -60,9 +62,11 @@
     }
 
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px) 
+{
     
-    #phrase{
+    #phrase
+    {
         font-weight: 200;
         font-family: cursive;
         color: seagreen;
@@ -78,5 +82,39 @@
     {
     height: 40rem;
     }
+    .none
+    {
+    display: none;
+    }
+    .post-img {
+        transition:all .5s;
+        max-width: 5em;
+        max-height: 5em;
+        position: relative;
+    }
 
+
+
+}
+.phraseBody 
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
+.nomCarousel
+{
+    font-size: 2rem;
+    background-color: rgba(112, 112, 112, 0.205);
+    background-size: 2rem;
+}
+.prixCarousel 
+{
+    font-size: 1rem;
+    background-color:  rgba(112, 112, 112, 0.205);
+    background-size: 0.1em;
+}
+.fleche
+{
+    
+    border: none;
 }

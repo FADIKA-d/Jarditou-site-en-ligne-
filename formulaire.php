@@ -102,10 +102,9 @@ if($age<$majorityAge) //condition si la variable âge est inférieur à l'âge d
     ?>
 <div class="container-fluid">
     <div class="row pt-3">
-        <div class="col-12 col-md-9">
+        <div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
             <p class="rouge">* Ces zones sont obligatoires</p>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
+            <div class="pt-2 pr-0 mr-1 col-md-10">
                     <form action="#" method="POST" id="formContact" class="">
                         <fieldset class="border border-dark p-2">
                             <legend>Vos coordonnées</legend>
@@ -258,6 +257,5 @@ if($age<$majorityAge) //condition si la variable âge est inférieur à l'âge d
                         </div>
                     </form>
                 </div>
-            </div>
         </div>
         <?php include_once "endOfPage.php" ?>

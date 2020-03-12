@@ -7,27 +7,27 @@
         // Appel de la fonction de connexion
         $db = connexionBase();
         $sql = "SELECT `cat_id`, `cat_nom` FROM `jarditou_categories`";
-        $req = $db->query($sql);
-        return $req->fetchAll(PDO::FETCH_OBJ);
+        $requete = $db->query($sql);
+        return $requete->fetchAll(PDO::FETCH_OBJ);
     }
 
     function productdetails($pro_id)
     {
         $db = connexionBase(); // Appel de la fonction de connexion
         $sql = "SELECT `pro_id`, `pro_ref`, `pro_cat_id`, `pro_libelle`, `pro_description`, `pro_prix`, `pro_stock`, `pro_couleur`, `pro_photo`, `pro_bloque`, `pro_d_ajout`, `pro_d_modif` FROM `jarditou_produits` WHERE `pro_id`= :pro_id ";
-        $req = $db->prepare($sql);
-        $req->bindParam(':pro_id', $pro_id);
-        $req->execute();
-        return $req->fetch(PDO::FETCH_ASSOC);
+        $requete = $db->prepare($sql);
+        $requete->bindParam(':pro_id', $pro_id);
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
     }
 
     function products()
     {
         $db = connexionBase(); 
         $sql = "SELECT `pro_id`, `pro_cat_id`, `pro_ref`, `pro_libelle`, `pro_description`, `pro_prix`, `pro_stock`, `pro_couleur`, `pro_photo`, `pro_d_ajout`, `pro_d_modif`, `pro_bloque` FROM `jarditou_produits`";
-        $req = $db->query($sql);
-        $req->execute();
-        return $req->fetchAll(PDO::FETCH_OBJ);
+        $requete = $db->query($sql);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_OBJ);
     }
 
     function addProduct($pro_cat_id, $pro_ref, $pro_libelle, $pro_description, $pro_prix, $pro_stock, $pro_couleur, $pro_photo)
@@ -122,5 +122,11 @@
         $data= strip_tags($data);
         return $data;
     }
-
+    function carousel() 
+    {
+        $db = connexionBase();
+        $sql = "SELECT * FROM `jarditou_produits` ORDER BY `pro_id` DESC LIMIT 4";
+        $requete = $db->query($sql);
+        return $requete->fetchAll(PDO::FETCH_OBJ);
+    }
     

@@ -1,7 +1,6 @@
 <?php 
- require "connexion_bdd.php"; // Inclusion de notre bibliothèque de fonctions
- 
- $db = connexionBase(); // Appel de la fonction de connexion
+ include 'functions.php'; // appel de la page de fonctions
+
  
  ?>
 
@@ -41,23 +40,47 @@
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             
-                            <div class="collapse navbar-collapse" id="navbarToggler">
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
                                 <ul class="navbar-nav pt-0 pt-md-5 ">
-                                    <li class="nav-item index mx-3"><a class="nav-link font-weight-bold text-light btn btn-outline-light"href="index.php">Accueil</a></li>
-                                    <li class="nav-item index mx-3"><a class="nav-link font-weight-bold text-light btn btn-outline-light" href="formulaire.php">Contact</a></li>
-                                    <li class="nav-item index mx-3"><a class="nav-link font-weight-bold text-light btn btn-outline-light" href="product_liste.php">Produits</a> </li>
+                                    <li class="nav-item index mx-3"><a class="nav-link font-weight-bold" href="index.php">Accueil</a></li>
+                                    <li class="nav-item index mx-3"><a class="nav-link font-weight-bold" href="formulaire.php">Contact</a></li>
+                                    <li class="nav-item index mx-3"><a class="nav-link font-weight-bold" href="product_liste.php">Produits</a> </li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div class="pub col-12 d-none d-md-flex px-0 flex-wrap">
-            <img src="assets\img\images\promotion.jpg" alt="image promotion" class="w-100 h-auto rounded pt-2">
-            <div class="row pt-3">
-            <div class="row col-12 col-md-9">
-        </div>
-        </div>
+            <div class="pub col-12 d-none d-md-block d-md-flex px-0 flex-wrap">
+                <img src="assets\img\images\promotion.jpg" alt="image promotion" class="w-100 h-auto rounded pt-2">
+            <div>
+                <div class="row pt-3">
+                    <div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
+                        <div class="pt-5 px-0 mr-1 col-md-10 ">
+                            <h1 class="">Accueil</h1> 
+                                <hr>
+                                <section>
+                                    <article>
+                                        <h4>L'entreprise</h4>
+                                        <p>Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du paysagisme.</p>
+                                        <p>Créée il y a 70 ans, notre entreprise vend fleurs, arbustes, matériel à main et motorisés.</p>
+                                        <p>Implantés à Amiens, nous intervenons dans tout le département de la Somme : Albert, Doullens, Péronne, Abbeville, Corbie.</p>
+                                    </article>
+                                </section>
+                                <section>
+                                    <article>
+                                        <h4>Qualité</h4>
+                                        <p>Nous mettons à votre disposition un service personnalisé, avec 1 seul interlocuteur durant tout votre projet.</p>
+                                        <p>Vous serez séduit par notre expertise, nos compétences et notre sérieux.</p>
+                                    </article>
+                                    <article>
+                                        <h4>Devis gratuit</h4>
+                                        <p>Vous pouvez bien sûr contacter pour de plus amples informations ou pour une demande d’intervention. Vous souhaitez un devis ? Nous vous le réalisons gratuitement.</p>
+                                    </article>
+                                </section>
+                        </div>
+                    </div>
+                
         <?php include_once "endOfPage.php" ?>
 
 

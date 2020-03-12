@@ -1,13 +1,18 @@
 <?php 
  //require "connexion_bdd.php"; // page de connexion
  
-if(!isset($_GET['pro_id'])){
+// if(!isset($_GET['pro_id'])){
+//     header('Location:product_liste.php');
+//     exit();
+// }
+
+if(!isset($_GET['pro_id']) && !isset($_POST['pro_id'])){
     header('Location:product_liste.php');
     exit();
 }
 require 'functions.php';
 $categories = getCategories(); // Appel de la fonction getCategories dans une variable
-$pro_id = $_GET['pro_id'];
+$pro_id = $_GET['pro_id'] ?? $_POST['pro_id'];   // initialisation de la variable GET 
 
 $productDetails = productdetails($pro_id); // Appel de la fonction productdetails dans une variable
 $libelleTable = ['ID', 'Référence', 'Catégorie', 'Libellé', 'Description', 'Prix', 'Stock', 'Couleur', 'Photo', 'Bloqué', 'Date d\'ajout', 'Date de modification'];
@@ -26,7 +31,7 @@ if (isset($_GET['delete'])) // si la valeur du bouton supprimer est envoyé
 <?php include_once "topOfPage.php" ?>
 <div class="container-fluid">
     <div class="row pt-3">
-<div class="row col-12 col-md-9">
+<div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
 <form action="product_details.php" method="POST" class="col-12 col-lg-7">
     <?php
 
@@ -126,6 +131,5 @@ if (isset($_GET['delete'])) // si la valeur du bouton supprimer est envoyé
     </div>
 </div>
 </form>
-</div>
 </div>
 <?php include_once "endOfPage.php" ?>

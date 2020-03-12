@@ -107,7 +107,7 @@ if(isset($fail)) // condition si echec de l'enregistrement
 { 
     //ouverture d'une alerte d'information 
 ?>
-<p class="alert alert-danger">Le produit n'a pas été modifié !</p> 
+<p class="alert alert-danger"> Le produit n'a pas été modifié ! </p> 
 <?php 
     } 
 
@@ -116,8 +116,9 @@ if(isset($fail)) // condition si echec de l'enregistrement
 
 <div class="container-fluid">
     <div class="row pt-3">
-<div class="row col-12 col-md-9">
-    <form action="product_add" method="POST" enctype="multipart/form-data" class="col-12 col-lg-7">
+<div class="row col-12 col-md-7 px-1 pt-5 mx-0 justify-content-center">
+    <p class="phraseBody">Veuillez ajouter le nouveau produit :</p>
+    <form action="product_add" method="POST" enctype="multipart/form-data" class=" pt-2 pr-0 mr-1 col-md-10">
         <div class="form-group">
             <label for="pro_ref">Référence</label>
             <input type="text" name="pro_ref" id="pro_ref" value="<?=$pro_ref?>" 
@@ -182,6 +183,5 @@ if(isset($fail)) // condition si echec de l'enregistrement
         <button class="btn btn-secondary"><a href="product_liste.php">Retour</a></button>
         <button type="submit" name="submit" class="btn btn-secondary">Enregistrer</button>
     </form>
-</div>
 </div>
 <?php include_once "endOfPage.php" ?>

@@ -2,12 +2,18 @@
 require 'functions.php'; // appel de la pages des fonctions
 
 // redirection vers la page liste si il n'y a pas de GET
-if(!isset($_GET['pro_id']) && !isset($_POST['pro_id'])){
+
+if(!isset($_GET['pro_id'])){
     header('Location:product_liste.php');
     exit();
 }
 
-$pro_id = $_GET['pro_id'] ?? $_POST['pro_id'];   // initialisation de la variable GET 
+// if(!isset($_GET['pro_id']) && !isset($_POST['pro_id'])){
+//     header('Location:product_liste.php');
+//     exit();
+// }
+
+$pro_id = $_GET['pro_id'] ?? '' ;   // initialisation de la variable GET 
 
 $productModif = productdetails($pro_id); // initialisation de la fonction productdetails avec comme argument $pro_id
 
@@ -115,8 +121,10 @@ if(isset($fail)) // condition si echec de l'enregistrement
 
 <div class="container-fluid">
     <div class="row pt-3">
-<div class="row col-12 col-md-9">
-    <form action="product_modif.php?pro_id=<?= $pro_id ?>" method="POST" enctype="multipart/form-data" class="col-12 col-lg-7">
+
+<div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
+<p class="phraseBody">Veuillez modifier le produit :</p>
+    <form action="product_modif.php?pro_id=<?= $pro_id ?>" method="POST" enctype="multipart/form-data" class="pt-2 pr-0 mr-1 col-md-10">
         <div class="form-group">
             <label for="pro_id">ID</label>
             <input type="text" name="pro_id" id="pro_id" value="<?= $productModif['pro_id'] ?>" class="form-control" readonly >
@@ -207,6 +215,5 @@ if(isset($fail)) // condition si echec de l'enregistrement
         <button class="btn btn-secondary"><a href="product_liste.php">Annuler</a></button>
         <button type="submit" name="submit" class="btn btn-secondary">Enregistrer</button>
     </form>
-</div>
 </div>
 <?php include_once "endOfPage.php" ?>
