@@ -120,7 +120,7 @@ if(isset($fail)) // condition si echec de l'enregistrement
 ?>
 
 <div class="container-fluid">
-    <div class="row pt-3">
+    <div class="row pt-3 pr-5 justify-content-between ">
 
 <div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
 <p class="phraseBody">Veuillez modifier le produit :</p>

@@ -8,7 +8,7 @@ $sourceCarousel =  carousel();
     $srcCarousel_1 = "assets/img/images/".$sourceCarousel[1]->pro_id;
     $srcCarousel_2 = "assets/img/images/".$sourceCarousel[2]->pro_id;
 ?>
-    <div class="d-none d-md-block col-md-3 mt-5 pr-0">
+    <div class="d-none d-md-block col-md-3 mt-5 pr-0 mr-1">
         <div id="newProductCarousel" class="carousel slide sticky-top" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

@@ -115,7 +115,7 @@ if(isset($fail)) // condition si echec de l'enregistrement
     ?>
 
 <div class="container-fluid">
-    <div class="row pt-3">
+    <div class="row pt-3 pr-5 justify-content-between ">
 <div class="row col-12 col-md-7 px-1 pt-5 mx-0 justify-content-center">
     <p class="phraseBody">Veuillez ajouter le nouveau produit :</p>
     <form action="product_add" method="POST" enctype="multipart/form-data" class=" pt-2 pr-0 mr-1 col-md-10">

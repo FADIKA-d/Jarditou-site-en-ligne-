@@ -24,26 +24,29 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
 
 <?php include_once "topOfPage.php" ?> 
 <div class="container-fluid">
-    <div class="row pt-3">    
-        <div class="col-md-7 px-1 mx-0 row">
-            <div class="table pt-5 px-0 mr-1 col-md-10 d-flex">
+    <div class="row pt-3 pr-5 justify-content-between ">    
+        <div class="col-md-7 px-1 mx-0 row d-flex">
+            <div class="table table-responsive pt-5 px-0 mr-0 col-md-10 d-flex">
+            <div class="col-12 px-0 mx-0 justify-content-center">
+                    <a href="product_add.php"><button class="btn sticky-top "><i class="far fa-plus-square fa-2x plus px-0"></i></button></a></div>
+                </div>
                  <table class="table table-bordered table-hover border">
-                    <a href="product_add.php"><button class="btn sticky-top"><i class="far fa-plus-square fa-2x plus px-0"></i></button></a></div>
+                    <!-- <a href="product_add.php"><button class="btn sticky-top col-12"><i class="far fa-plus-square fa-2x plus px-0"></i></button></a></div> -->
                     <form method="POST" action="product_liste.php" id="formD">
                             <thead class="">
                                 <tr class="">
-                                    <th class="sticky-top bg-white" >Photo</th>
-                                    <th class="sticky-top bg-white" >ID</th>
-                                    <th class="none sticky-top bg-white" >Référence</th>
-                                    <th class="sticky-top bg-white" >Libellé</th>
-                                    <th class="sticky-top bg-white" >Prix</th>
-                                    <th class="none sticky-top bg-white">Stock</th>
-                                    <th class="none sticky-top bg-white" >Couleur</th>
-                                    <th class="none sticky-top bg-white">Ajout</th>
-                                    <th class="sticky-top bg-white">Modif</th>
-                                    <th class="none sticky-top bg-white">Bloqué</th>
-                                    <th class="none sticky-top bg-white"><i class="fas fa-trash-alt"></i></th>
-                                    <th class="d-md-none fleche">
+                                    <th class="sticky-top bg-white case" >Photo</th>
+                                    <th class="sticky-top bg-white case" >ID</th>
+                                    <th class="none sticky-top bg-white case" >Référence</th>
+                                    <th class="sticky-top bg-white case" >Libellé</th>
+                                    <th class="sticky-top bg-white case_prix" >Prix</th>
+                                    <th class="none sticky-top bg-white case">Stock</th>
+                                    <th class="none sticky-top bg-white case" >Couleur</th>
+                                    <th class="none sticky-top bg-white case">Ajout</th>
+                                    <th class="sticky-top bg-white case">Modif</th>
+                                    <th class="none sticky-top bg-white case">Bloqué</th>
+                                    <th class="none sticky-top bg-white case"><i class="fas fa-trash-alt"></i></th>
+                                    <th class="d-md-none fleche case">
                                     <div class="btn-group dropright">
                                         <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="sr-only">Toggle Dropright</span>
@@ -69,7 +72,7 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
                                                 }           
                                     }               
                                 ?>
-                                <tr> 
+                                <tr class=""> 
                                     <td>
                                     <div class="photo  d-flex justify-content-center">
                                     <a href="product_liste.php?card_id=<?=$product->pro_id?>" data-toggle="collapse" aria-expanded="false" aria-controls="product_card"></a>
@@ -80,15 +83,15 @@ if(isset($_GET['deleteAsk'])) // Si la valeur validé (du bouton validé de la f
                                     </td>
                                     <!-- <td><a href="#product_card" data-toggle="dropright" aria-expanded="false" aria-controls="product_card" class="form-control" ><img src="<?= $src ?>" alt="photo" class="dropright w-25 h-auto" ></img></a></td> -->
                                     <td><?php echo $product->pro_id; ?></td>
-                                    <td class="none" ><?php echo $product->pro_ref; ?></td>
+                                    <td class="none case" ><?php echo $product->pro_ref; ?></td>
                                     <td><a href="product_details.php?pro_id=<?= $product->pro_id ?>"><?php echo  $product->pro_libelle; ?></a></td>
                                     <td><?php echo $product->pro_prix; ?></td>
-                                    <td class="none" ><?php echo $product->pro_stock; ?></td>
-                                    <td class="none" ><?php echo $product->pro_couleur; ?></td>
-                                    <td class="none" ><?php echo $product->pro_d_ajout; ?></td>
-                                    <td><a href="product_modif.php?pro_id=<?= $product->pro_id ?>"><i class="fas fa-edit fa-2x"></i></a><br><?php echo $product->pro_d_modif; ?></td>
-                                    <td class="none"><?php echo $product->pro_bloque; ?></td>
-                                    <td class="none"><button class="btn btn-secondary" type="submit" name="ppa"><input type="checkbox" name="delete[<?=$product->pro_id?>]" value="<?=$product->pro_id?>"></button></td>
+                                    <td class="none case" ><?php echo $product->pro_stock; ?></td>
+                                    <td class="none case" ><?php echo $product->pro_couleur; ?></td>
+                                    <td class="none case" ><?php echo $product->pro_d_ajout; ?></td>
+                                    <td class="case"><a href="product_modif.php?pro_id=<?= $product->pro_id ?>"><i class="fas fa-edit fa-2x"></i></a><br><?php echo $product->pro_d_modif; ?></td>
+                                    <td class="none case"><?php echo $product->pro_bloque; ?></td>
+                                    <td class="none case"><button class="btn btn-secondary" type="submit" name="ppa"><input type="checkbox" name="delete[<?=$product->pro_id?>]" value="<?=$product->pro_id?>"></button></td>
                                     <!-- <td><button class="btn btn-secondary" type="button" name="ppa" class="btn btn-secondary" data-toggle="modal" data-target="#delete_modal"><input type="checkbox" name="delete[<?=$product->pro_id?>]" value="<?=$product->pro_id?>"></button></td> -->
 
                                 </tr>

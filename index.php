@@ -41,7 +41,7 @@
                             </button>
                             
                             <div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
-                                <ul class="navbar-nav pt-0 pt-md-5 ">
+                                <ul class="navbar-nav pt-0 pt-md-5 flex-wrap">
                                     <li class="nav-item index mx-3"><a class="nav-link font-weight-bold" href="index.php">Accueil</a></li>
                                     <li class="nav-item index mx-3"><a class="nav-link font-weight-bold" href="formulaire.php">Contact</a></li>
                                     <li class="nav-item index mx-3"><a class="nav-link font-weight-bold" href="product_liste.php">Produits</a> </li>
@@ -53,8 +53,8 @@
             </div>
             <div class="pub col-12 d-none d-md-block d-md-flex px-0 flex-wrap">
                 <img src="assets\img\images\promotion.jpg" alt="image promotion" class="w-100 h-auto rounded pt-2">
-            <div>
-                <div class="row pt-3">
+            </div>
+                <div class="row pt-3 pr-3 justify-content-between ">
                     <div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
                         <div class="pt-5 px-0 mr-1 col-md-10 ">
                             <h1 class="">Accueil</h1> 

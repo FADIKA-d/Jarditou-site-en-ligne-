@@ -101,7 +101,7 @@ if($age<$majorityAge) //condition si la variable âge est inférieur à l'âge d
     } 
     ?>
 <div class="container-fluid">
-    <div class="row pt-3">
+    <div class="row pt-3 pr-5 justify-content-between ">
         <div class="row col-12 col-md-7 px-1 mx-0 justify-content-center pt-5">
             <p class="rouge">* Ces zones sont obligatoires</p>
             <div class="pt-2 pr-0 mr-1 col-md-10">

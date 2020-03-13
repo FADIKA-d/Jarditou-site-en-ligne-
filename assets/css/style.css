@@ -117,4 +117,13 @@
 {
     
     border: none;
+    table-layout: fixed;
+   width: 15px;
+
+}
+
+.table
+{
+   table-layout: fixed;
+   width: 15px;
 }
